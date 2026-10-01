@@ -7,99 +7,138 @@
 @media(max-width:900px){.keynote-profile{grid-template-columns:260px 1fr;gap:30px}.keynote-person{position:static}.section-heading h2{font-size:34px}}
 @media(max-width:680px){.keynote-section{padding:55px 0}.keynote-profile{grid-template-columns:1fr;padding:34px 0;gap:25px}.keynote-person{display:grid;grid-template-columns:120px 1fr;gap:17px;align-items:center}.keynote-person img{aspect-ratio:1/1.08}.keynote-identity{padding:0}.keynote-number{display:none}.keynote-identity h3{font-size:19px}.keynote-block,.talk-card{padding:22px}.section-heading{margin-bottom:25px}.section-heading h2{font-size:30px}.talk-title{font-size:21px!important}}
 /* =========================================================
-   SPONSORS
+   SPONSOR STRIP
    ========================================================= */
 
-.sponsors-section {
+.sponsor-strip-section {
+  width: 100%;
+  padding: 70px 24px;
+  background: #f7f3fa;
+  border-top: 1px solid rgba(81, 36, 122, 0.08);
+  border-bottom: 1px solid rgba(81, 36, 122, 0.08);
+}
+
+.sponsor-strip-inner {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+}
+
+.sponsor-strip-heading {
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  margin-bottom: 34px;
 }
 
-.sponsors-heading {
-  margin-bottom: 36px;
+.sponsor-strip-heading h2 {
+  margin: 0;
+  color: var(--purple-dark);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
-.sponsors-heading h2 {
-  margin-left: auto;
-  margin-right: auto;
-}
+/* White logo strip */
 
-.sponsor-intro {
-  max-width: 620px;
-  margin: 14px auto 0;
-  color: var(--muted);
-  font-size: 1rem;
-}
+.sponsor-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
 
-.sponsor-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  align-items: stretch;
-}
-
-.sponsor-card {
-  min-height: 155px;
-  padding: 24px;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
+  gap: 35px;
+
+  width: 100%;
+  min-height: 150px;
+
+  padding: 28px 36px;
 
   background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px rgba(81, 36, 122, 0.08);
+}
+
+/* General logo treatment */
+
+.sponsor-strip-logo {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 22%;
+  max-height: 90px;
+
+  object-fit: contain;
 
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    opacity 0.2s ease;
 }
 
-.sponsor-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(81, 36, 122, 0.12);
+.sponsor-strip-logo:hover {
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
-.sponsor-logo {
-  display: block;
-  width: 100%;
-  height: 90px;
-  object-fit: contain;
-}
+/* Individual logo adjustments */
 
-/* Individual adjustments because the logos have different shapes */
-
-.sponsor-logo-bmg {
+.logo-bmg {
   max-width: 240px;
+  max-height: 80px;
 }
 
-.sponsor-logo-coherent {
-  max-width: 210px;
-  height: 75px;
-}
-
-.sponsor-logo-qiagen {
-  max-width: 210px;
-}
-
-.sponsor-logo-agrf {
+.logo-coherent {
   max-width: 190px;
+  max-height: 70px;
 }
 
-/* Responsive layout */
+.logo-qiagen {
+  max-width: 210px;
+  max-height: 90px;
+}
 
-@media (max-width: 900px) {
-  .sponsor-grid {
-    grid-template-columns: repeat(2, 1fr);
+.logo-agrf {
+  max-width: 175px;
+  max-height: 90px;
+}
+
+
+/* Tablet */
+
+@media (max-width: 850px) {
+
+  .sponsor-strip {
+    flex-wrap: wrap !important;
+    justify-content: center;
   }
+
+  .sponsor-strip-logo {
+    max-width: 40%;
+  }
+
 }
+
+
+/* Mobile */
 
 @media (max-width: 520px) {
-  .sponsor-grid {
-    grid-template-columns: 1fr;
+
+  .sponsor-strip-section {
+    padding: 50px 16px;
   }
 
-  .sponsor-card {
-    min-height: 130px;
+  .sponsor-strip {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+
+    gap: 28px;
+    padding: 30px 24px;
   }
+
+  .sponsor-strip-logo {
+    max-width: 75%;
+    max-height: 75px;
+  }
+
 }
