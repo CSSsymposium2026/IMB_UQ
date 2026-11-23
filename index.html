@@ -19,7 +19,7 @@
           </a>
       <button class="menu-button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#programme">Programme</a><a href="#speakers">Speakers</a><a href="#registration">Registration</a>
+        <a href="#home">Home</a><a href="#about">About</a><a href="#programme">Programme</a><a href="#speakers">Speakers</a><a href="#registration">Registration</a><a href="#peoples-choice">People's Choice</a>
         <!--<a class="nav-register" href="#registration">Register Now</a>-->
       </nav>
     </div>
@@ -260,6 +260,186 @@ Flash Talks:
 
   </div>
 </section>
+    
+<!-- ==================================== -->
+<!-- PEOPLE'S CHOICE AWARD - CSS 2026 -->
+<!-- ==================================== -->
+
+<style>
+  .peoples-choice {
+    padding: 75px 0;
+    background: linear-gradient(
+      125deg,
+      #51247A 0%,
+      #236f92 55%,
+      #3ba4a2 100%
+    );
+    color: #ffffff;
+  }
+
+  .peoples-choice-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .peoples-choice-text h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 15px 0 25px;
+  }
+
+  .peoples-choice-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 550px;
+    margin-bottom: 18px;
+  }
+
+  .peoples-choice-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .peoples-choice-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 30px;
+    background: #ffffff;
+    color: #51247A;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .peoples-choice-button:hover {
+    background: #e9d7fa;
+    transform: translateY(-3px);
+  }
+
+  .peoples-choice-qr {
+    text-align: center;
+  }
+
+  .peoples-choice-qr img {
+    display: block;
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+  }
+
+  .peoples-choice-qr p {
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .peoples-choice {
+      padding: 50px 20px;
+    }
+
+    .peoples-choice-inner {
+      grid-template-columns: 1fr;
+      gap: 35px;
+      text-align: center;
+    }
+
+    .peoples-choice-text h2 {
+      font-size: 32px;
+    }
+
+    .peoples-choice-qr img {
+      max-width: 270px;
+    }
+  }
+</style>
+
+<section class="peoples-choice" id="peoples-choice">
+
+  <div class="wrap peoples-choice-inner">
+
+    <!-- LEFT: AWARD INFORMATION -->
+    <div class="peoples-choice-text">
+
+      <div class="peoples-choice-label">
+        CSS SYMPOSIUM 2026
+      </div>
+
+      <h2>
+        People's Choice Award
+      </h2>
+
+      <p>
+        Your vote matters!
+      </p>
+
+      <p>
+        Help us celebrate outstanding research
+        presented at the Centre for Superbug
+        Solutions Symposium 2026.
+      </p>
+
+      <p>
+        Vote for your favourite presentation
+        and help recognise the research that
+        inspired you the most!
+      </p>
+
+      <a
+        class="peoples-choice-button"
+        href="https://forms.cloud.microsoft/r/tVbShwNhDF"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Vote for People's Choice &rarr;
+      </a>
+
+    </div>
+
+    <!-- RIGHT: QR CODE -->
+    <div class="peoples-choice-qr">
+
+      <a
+        href="https://forms.cloud.microsoft/r/tVbShwNhDF"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open People's Choice voting form"
+      >
+
+        <img
+          src="assets/peoples_choice_qr.png"
+          alt="People's Choice Award voting QR code"
+          loading="lazy"
+        >
+
+      </a>
+
+      <p>
+        Scan the QR code to cast your vote!
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END PEOPLE'S CHOICE AWARD -->
+
     <section class="cta" id="registration"><div class="wrap cta-grid"><div><p class="eyebrow pale">Register &amp; submit</p><div class="mini-rule light"></div><h2></h2><p>Join the CSS community at Customs House for a full day of antimicrobial resistance research, discussion and connection.</p></div><div class="cta-actions"><a class="btn btn-light wide" href="https://docs.google.com/forms/d/e/1FAIpQLScRn4bKB2WigVHStZ3jPbygEUGvOX7HpA2LdEkSlTmQ4v7wCA/viewform?usp=dialog" data-placeholder="registration">● &nbsp; Register Now <span>→</span></a><a class="btn btn-outline wide" id="abstracts" href="https://docs.google.com/forms/d/e/1FAIpQLSe6NzFAupUqzDN_lWiYPloklDuHqP3HvOTnNQuBcTQKpZVBTg/viewform?usp=dialog" data-placeholder="abstract">▣ &nbsp; Submit an Abstract <span>→</span></a></div></div></section>
   </main>
 
