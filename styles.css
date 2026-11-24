@@ -142,3 +142,32 @@
   }
 
 }
+/* Footer website credit */
+.site-footer .footer-credit {
+  width: 100%;
+  max-width: 1180px;
+  margin: 25px auto 0;
+  padding: 18px 15px 0;
+  border-top: 1px solid #e5ddeb;
+  text-align: center;
+}
+
+.site-footer .footer-credit p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777;
+  text-align: center;
+}
+
+.site-footer .footer-credit strong {
+  color: #51247A;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .site-footer .footer-credit p {
+    font-size: 11px;
+  }
+}
+
